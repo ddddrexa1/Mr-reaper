@@ -92,7 +92,7 @@ function setStatus(message, error = false) {
 function getPlayerId() {
 
   let id =
-    localStorage.getItem(
+    sessionStorage.getItem(
       "mr_reaper_player_id"
     );
 
@@ -100,7 +100,7 @@ function getPlayerId() {
 
     id = crypto.randomUUID();
 
-    localStorage.setItem(
+    sessionStorage.setItem(
       "mr_reaper_player_id",
       id
     );
@@ -108,6 +108,7 @@ function getPlayerId() {
 
   return id;
 }
+
 
 
 // ROOM CODE
